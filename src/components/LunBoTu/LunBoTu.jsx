@@ -43,13 +43,18 @@ class LunBoTu extends Component{
 	goplay(){
 		this.autoPlayFlag=setInterval(()=>{
 			this.turn(1);
-		},2000)
+		},3000)
 	}
-	
+	pausePlay(){
+		clearInterval(this.autoPlayFlag);
+	}
+	turnaround(option){
+		this.turn(option);
+	}
 	componentDidMount() {
 		this.goplay();
 	}
-	
+
 
 	render(){
 
@@ -61,18 +66,20 @@ class LunBoTu extends Component{
 			}*/
 			const j=this.state.i;
 			const data=imgdata[j];
-			console.log('data='+JSON.stringify(data));
 		return(
 			<div className={styles.tu_main}>
 				<ul className={styles.tu_ul}>
-					<li><img className={styles.tu_img} src={data.src} alt={data.alt}/></li>
+					<li onMouseOver={this.pausePlay.bind(this)} onMouseOut={this.goplay.bind(this)}><a className={styles.left} onClick={this.turnaround.bind(this,-1)}>上一页</a><img className={styles.tu_img} src={data.src} alt={data.alt}/><a className={styles.right} onClick={this.turnaround.bind(this,1)}>下一页</a></li>
 				</ul>
 			</div>
 
 			);
 	}
-
+	componentWillUnmount() {
+		clearInterval(this.autoPlayFlag);
+	}
 }
+
 LunBoTu.propTypes = {
 };
 
