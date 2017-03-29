@@ -25,8 +25,8 @@ class TableforPace extends Component{
 			  }
 			}];			
 		return(
-			<div>
-			<h3>{data[0].pjname}</h3>
+			<div className={styles.progress}>
+			<h3 className={styles.htext}>{data[0].pjname}</h3>
 			<Progress percent={data[0].pjpres} status="active"/>
 			 <Table
 			    columns={columns}

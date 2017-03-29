@@ -2,15 +2,11 @@ import React, { PropTypes, Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { Menu, Breadcrumb, Icon, Button, Modal, Form, Input, Radio, Spin,Layout } from 'antd';
-import styles from './Admine.less';
+import styles from './Progress.less';
 import { Progress } from 'antd';
 
-import CardofIT from '../../components/Cardtrking/CardofIT/CardofIT';
-import CardofGCloud from '../../components/Cardtrking/CardofGCloud/CardofGCloud';
-import CardofJK from '../../components/Cardtrking/CardofJK/CardofJK';
-import Tableforfollow from '../../components/Tableforfollow/Tableforfollow';
 import TableforPace from '../../components/TableforPace/TableforPace';
-import EchartsLine from '../../components/EchartsLine/EchartsLine';
+
 
 
 class Admine extends Component{
@@ -26,33 +22,29 @@ class Admine extends Component{
 	}
 	render(){
 		const { todos,dispatch } = this.props;
-		const { data , loading } = todos.getTrack;
-		
+		const { presData, loading} = todos.getProgress;
 		var j=0;
 		if(loading){
 			return (<Spin />);
 		}
-		const track=data.track;
-		const table=[];
-		const tabledata=[];
-		for(let i=0;i< track.length;i++){
-			tabledata.push(track[i]);
-		}
-		for(var i=0;i< tabledata.length;i++){
-			var tData=[];
-			tData.push(tabledata[i]);
-			table.push(<div key={j} className={styles.tableh}><h3 className={styles.tabletitle}>{tabledata[i].pjtname}</h3><Tableforfollow bordered={true} data={tData}/></div>);
+
+		const preshtml=[];
+		for(let key in presData){
+			preshtml.push(<div key={j} className={styles.tableh3}>
+						{/*<h3 className={styles.tabletitleforpace}>{key}</h3>
+						<Progress percent={50} status="active"/>*/}
+						<TableforPace data={presData[key]}/>
+					</div>);
 			j++;
-		};
+		}
 		
 		return(
 			<div className={styles.main}>
+				
 				<div>
-					<h2 className={styles.divtitle}>项目跟进</h2>
-					{table}
-					
+					<h2 className={styles.divtitle}>产品进度</h2>
+					{preshtml}
 				</div>
-
 				
 				<div className={styles.footer}>
 
