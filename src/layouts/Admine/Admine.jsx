@@ -1,16 +1,11 @@
 import React, { PropTypes, Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import { connect } from 'react-redux';
-import { Menu, Breadcrumb, Icon, Button, Modal, Form, Input, Radio, Spin,Layout } from 'antd';
+import { Spin } from 'antd';
 import styles from './Admine.less';
 import { Progress } from 'antd';
 
-import CardofIT from '../../components/Cardtrking/CardofIT/CardofIT';
-import CardofGCloud from '../../components/Cardtrking/CardofGCloud/CardofGCloud';
-import CardofJK from '../../components/Cardtrking/CardofJK/CardofJK';
 import Tableforfollow from '../../components/Tableforfollow/Tableforfollow';
-import TableforPace from '../../components/TableforPace/TableforPace';
-import EchartsLine from '../../components/EchartsLine/EchartsLine';
 
 
 class Admine extends Component{
@@ -27,7 +22,6 @@ class Admine extends Component{
 	render(){
 		const { todos,dispatch } = this.props;
 		const { data , loading } = todos.getTrack;
-		
 		var j=0;
 		if(loading){
 			return (<Spin />);
@@ -52,7 +46,6 @@ class Admine extends Component{
 					{table}
 					
 				</div>
-
 				
 				<div className={styles.footer}>
 

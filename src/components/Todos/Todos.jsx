@@ -9,6 +9,7 @@ import Admine from '../../layouts/Admine/Admine';
 import Indicator from '../../layouts/Indicator/Indicator';
 import Progress from '../../layouts/Progress/Progress';
 import Monitor from '../../layouts/Monitor/Monitor';
+import Echarts from '../../layouts/Echarts/Echarts';
 
 class Todos extends Component {
   constructor(props) {
@@ -28,7 +29,9 @@ class Todos extends Component {
     }else if(location.pathname==='/monitor'){
       return (<Monitor />);
     }else if(location.pathname==='/'){
-      return (<Admine/>);
+      return (<Admine />);
+    }else if(location.pathname==='/echarts'){
+      return (<Echarts/>);
     }else{
       return (<NotFound/>);
     }

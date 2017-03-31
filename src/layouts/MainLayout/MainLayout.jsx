@@ -33,7 +33,8 @@ class MainLayout extends React.Component{
           collapsible
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse} 
-          width={240} 
+          width={240}
+          height={800} 
           collapsedWidth={65}         
         >   
         <p style={{textAlign:'center'}}><img src='../../../static/images/timg.jpg' width='50' height='50'/></p>
@@ -64,7 +65,10 @@ class MainLayout extends React.Component{
                 <Link to='/lunbo'><Icon type="like-o" />轮播</Link>
               </Menu.Item>
               <Menu.Item key="5">
-                <Link to='/'><Icon type="like-o"/>无页面</Link>
+                <Link to='/echarts'><Icon type="like-o"/>可视化图表</Link>
+              </Menu.Item>
+              <Menu.Item key="6">
+                <Link to='/nothing'><Icon type="like-o"/>无页面</Link>
               </Menu.Item>
             </SubMenu>
           </Menu>
