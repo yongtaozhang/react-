@@ -41,17 +41,13 @@ class Admine extends Component{
 		
 		return(
 			<div className={styles.main}>
-				<div>
+				<div className={styles.maindiv}>
 					<h2 className={styles.divtitle}>项目跟进</h2>
 					{table}
 					
 				</div>
 				
-				<div className={styles.footer}>
-
-					<div style={{height:'4px',background:'#76933C'}}></div>
-					XXXX@2017
-				</div>
+				
 			</div>
 		);
 	}

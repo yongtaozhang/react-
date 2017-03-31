@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import { connect } from 'react-redux';
-import { Menu, Breadcrumb, Icon, Button, Modal, Form, Input, Radio, Spin,Layout } from 'antd';
+import { Spin } from 'antd';
 import styles from './Indicator.less';
 import { Progress } from 'antd';
 
@@ -46,11 +46,6 @@ class Admine extends Component{
           {/*<CardofJK/>*/}
         </div>
         
-        <div className={styles.footer}>
-
-          <div style={{height:'4px',background:'#76933C'}}></div>
-          XXXX@2017
-        </div>
       </div>
     );
   }

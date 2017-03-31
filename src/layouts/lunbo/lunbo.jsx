@@ -1,6 +1,5 @@
 import { Breadcrumb } from 'antd';
 import React, { PropTypes, Component } from 'react';
-import { Link, browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import LunBoTu from '../../components/LunBoTu/LunBoTu';
 import styles from '../lunbo/Lunbo.less'

@@ -13,16 +13,11 @@ class Echarts extends Component{
 			 <div className={styles.main}>
 
 	        <div className={styles.carddiv}>
-	          <h2 className={styles.divtitle}>数据指标</h2>
+	          <h2 className={styles.divtitle}>可视化工具</h2>
 	         	<EchartPie />
 	         	<EchartMap />
 	        </div>
 	        
-	        <div className={styles.footer}>
-
-          <div style={{height:'4px',background:'#76933C'}}></div>
-          XXXX@2017
-        </div>
       </div>
 			)
 	}

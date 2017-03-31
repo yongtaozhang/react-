@@ -76,8 +76,14 @@ class MainLayout extends React.Component{
         <Layout>
         <TopNav/>
          {this.props.children}
+         <div className={styles.footer}>
+          <div style={{height:'4px',background:'#76933C'}}></div>
+          XXXX@2017
+        </div>
         </Layout>
+        
       </Layout>
+
       )
   }
 };

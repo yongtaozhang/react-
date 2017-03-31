@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import { connect } from 'react-redux';
-import { Menu, Breadcrumb, Icon, Button, Modal, Form, Input, Radio, Spin,Layout } from 'antd';
+import { Spin } from 'antd';
 import styles from './Monitor.less';
 import { Progress } from 'antd';
 
@@ -131,7 +131,7 @@ class Admine extends Component{
 		return(
 			<div className={styles.main}>
 				
-				<div>
+				<div className={styles.maindiv}>
 					<h2 className={styles.divtitle}>资源监控(包含所有虚机和物理机)</h2>
 					<span className={styles.echartspan}>设备监控表</span>
 					<div style={{height:'2px',background:'#76933C'}}></div>
@@ -146,11 +146,7 @@ class Admine extends Component{
 						<EchartsLine/>
 					</div>*/}
 				</div>
-				<div className={styles.footer}>
-
-					<div style={{height:'4px',background:'#76933C'}}></div>
-					XXXX@2017
-				</div>
+				
 			</div>
 		);
 	}
