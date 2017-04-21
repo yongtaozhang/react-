@@ -29,6 +29,7 @@ class MainLayout extends React.Component{
     return(
 
         <Layout>
+
         <Sider
           collapsible
           collapsed={this.state.collapsed}
@@ -73,8 +74,9 @@ class MainLayout extends React.Component{
             </SubMenu>
           </Menu>
         </Sider>
+        
         <Layout>
-        <TopNav/>
+         <TopNav/>
          {this.props.children}
          <div className={styles.footer}>
           <div style={{height:'4px',background:'#76933C'}}></div>

@@ -1,0 +1,74 @@
+.top_menu{
+	color:#000;
+	.top_menu_btn{
+		font-size: 16px;
+		text-align: center;
+		height:40px;
+		line-height: 40px;
+		display: inline-block;
+		.top_menu_btn_icon {
+	      font-size: 16px;
+	      padding: 0 0 0 5px;
+	    }
+	}
+	.top_menu_btn:hover {
+    background-color: rgba(0,0,0, 0.3);
+    cursor: pointer;
+  }
+}
+.top_conent_show{
+	position: absolute;
+	top:110px;
+	left:243px;
+	z-index: 1;
+	min-height: 240px;
+	background-color: #fff;
+	border:1px solid #999;
+	line-height: 30px;
+	color:#000;
+	.top_menu_left{
+		width:150px;
+		border-right: 1px solid #ccc;
+		display: inline-block;
+		li{
+			padding-left: 20px;
+			cursor: pointer;
+		}
+	}
+	.menu_content_right {
+	    display: inline-block;
+	    vertical-align: top;
+	    padding: 0 15px;
+	    .menu_content_right_nav {
+	      width: 140px;
+	      display: inline-block;
+	      margin-right: 15px; 
+	       vertical-align: top;     
+	      li {
+	        padding-left: 10px;
+	        background-color: #F7F8FA;
+	        cursor: pointer;
+	      }
+	      li:hover {
+	        background-color: #00C1DE;
+	        color: #fff;
+	      }
+	      .header {
+	        background-color: #fff;
+	        cursor: default;
+	      }
+	      .header:hover {
+	        color: #000;
+	        background-color: #fff;
+	      }
+	    }
+  }
+}
+.menu_content_hide { // 导航内容隐藏
+  display: none;
+}
+
+.active {
+  background-color: #00C1DE !important;
+  color: #fff !important;
+}

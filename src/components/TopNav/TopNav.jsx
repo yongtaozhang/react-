@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import { Menu, Icon } from 'antd';
 
-
+import TopNavMenu from '../TopNavMenu/TopNavMenu';
 import styles from './TopNav.less';
 
 class TopMenu extends React.Component {
@@ -20,7 +20,11 @@ class TopMenu extends React.Component {
           <div className={styles.head}>
                   <Link to="/main">
                   <img src="/static/images/timg.jpg" height="120" width="120" />
+               
                   <span className={styles.sptext}>优质的汇总</span></Link>     
+          </div>
+          <div className={styles.top_menu}>
+                    <TopNavMenu />
           </div>
           <p className={styles.topspp}>信息汇总{time}</p>
         </div>      
