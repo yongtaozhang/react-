@@ -10,6 +10,9 @@ import Indicator from '../../layouts/Indicator/Indicator';
 import Progress from '../../layouts/Progress/Progress';
 import Monitor from '../../layouts/Monitor/Monitor';
 import Echarts from '../../layouts/Echarts/Echarts';
+import TableOperate from '../../layouts/TableOperate/TableOperate';
+import TableUpdata from '../../layouts/TableOperate/TableUpdata';
+import TableAdd from '../../layouts/TableOperate/TableAdd';
 
 class Todos extends Component {
   constructor(props) {
@@ -32,6 +35,12 @@ class Todos extends Component {
       return (<Admine />);
     }else if(location.pathname==='/echarts'){
       return (<Echarts/>);
+    }else if(location.pathname==='/table'){
+      return (<TableOperate/>);
+    }else if(location.pathname==='/updata'){
+      return (<TableUpdata/>);
+    }else if(location.pathname==='/tableadd'){
+      return (<TableAdd/>);
     }else{
       return (<NotFound/>);
     }

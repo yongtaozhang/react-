@@ -5,6 +5,7 @@ import getTrack from './getTrack';
 import getCard from './getCard';
 import getProgress from './getProgress';
 import getEcharts from './getEcharts';
+import getTabledata from './getTabledata';
 
 
 export default combineReducers({
@@ -12,4 +13,5 @@ export default combineReducers({
 	getCard,
 	getProgress,
 	getEcharts,
+	getTabledata,
 });

@@ -28,14 +28,13 @@ class MainLayout extends React.Component{
   render(){
     return(
 
-        <Layout>
+        <Layout style={{ height: '100vh' }}>
 
         <Sider
           collapsible
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse} 
           width={240}
-          height={800} 
           collapsedWidth={65}         
         >   
         <p style={{textAlign:'center'}}><img src='../../../static/images/timg.jpg' width='50' height='50'/></p>
@@ -56,6 +55,9 @@ class MainLayout extends React.Component{
               </Menu.Item>
               <Menu.Item key="3">
                   <Link to='/monitor'><Icon type="line-chart" />资源监控</Link>
+              </Menu.Item>
+               <Menu.Item key="4">
+                  <Link to='/table'><Icon type="line-chart" />表格操作</Link>
               </Menu.Item>
             </SubMenu>
             <SubMenu
