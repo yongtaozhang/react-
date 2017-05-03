@@ -64,7 +64,7 @@ class MainLayout extends React.Component{
               key="sub2"
               title={<span><Icon type="picture" /><span className="nav-text">小效果</span></span>}
             >
-              <Menu.Item key="4">
+              <Menu.Item key="7">
                 <Link to='/lunbo'><Icon type="like-o" />轮播</Link>
               </Menu.Item>
               <Menu.Item key="5">
