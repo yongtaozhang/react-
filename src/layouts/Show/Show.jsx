@@ -1,12 +1,12 @@
 import { Breadcrumb } from 'antd';
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import LunBoTu from '../../components/LunBoTu/LunBoTu';
-import Photo from '../../components/Photo/photo';
-import styles from '../lunbo/Lunbo.less'
+import Show3d from '../../components/Photo/Show3d';
+import styles from '../lunbo/Lunbo.less';
 
 
-class Lunbo extends Component{
+
+class Show extends Component{
 		constructor(props){
 			super(props);
 		}
@@ -14,19 +14,16 @@ class Lunbo extends Component{
 
 			return(
 					<div className={styles.main}>
-						  	<div className={styles.tu_div}>
-						  		<LunBoTu />
+						  	<div className={styles.tu_div3d}>
+						  		<Show3d />
 						  	</div>
-					 		<div className={styles.tu_div2}>
-					 			<Photo />
-					 		</div>
 
 					  </div>
 				);
 		}
 
 }
-Lunbo.propTypes = {
+Show.propTypes = {
 };
 
 function filter(todos){
@@ -39,4 +36,4 @@ function mapStateToProps({ todos }){
   };
 }
 
-export default connect(mapStateToProps)(Lunbo);
+export default connect(mapStateToProps)(Show);

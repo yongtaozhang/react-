@@ -70,6 +70,9 @@ class MainLayout extends React.Component{
               <Menu.Item key="5">
                 <Link to='/echarts'><Icon type="like-o"/>可视化图表</Link>
               </Menu.Item>
+              <Menu.Item key="8">
+                <Link to='/show'><Icon type="like-o"/>HTML5+CSS3</Link>
+              </Menu.Item>
               <Menu.Item key="6">
                 <Link to='/nothing'><Icon type="like-o"/>无页面</Link>
               </Menu.Item>

@@ -13,6 +13,7 @@ import Echarts from '../../layouts/Echarts/Echarts';
 import TableOperate from '../../layouts/TableOperate/TableOperate';
 import TableUpdata from '../../layouts/TableOperate/TableUpdata';
 import TableAdd from '../../layouts/TableOperate/TableAdd';
+import Show from '../../layouts/Show/Show';
 
 class Todos extends Component {
   constructor(props) {
@@ -41,6 +42,8 @@ class Todos extends Component {
       return (<TableUpdata/>);
     }else if(location.pathname==='/tableadd'){
       return (<TableAdd/>);
+    }else if(location.pathname==='/show'){
+      return (<Show/>);
     }else{
       return (<NotFound/>);
     }
