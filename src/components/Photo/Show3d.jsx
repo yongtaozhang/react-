@@ -19,7 +19,8 @@ class Show3d extends Component{
 					            </span>
 					        </div>
     					</li>
-					</ul>	
+					</ul>
+					<div className={styles.clearfix}></div>	
 				</div>
 			)
 	}

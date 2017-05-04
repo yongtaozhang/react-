@@ -1,0 +1,73 @@
+.main ul{
+	font-family: Microsoft YaHei, Tahoma, Geneva, sans-serif;
+	width: 99%;
+	margin:0 auto;
+}
+.main ul li{
+	width: 225px;
+	height: 180px;
+	display: inline-block;
+	margin-right: 50px;
+}
+.main ul li a{
+	position: relative;
+	width:100%;
+	height:100%;
+	display: block;
+	-webkit-perspective: 800px;
+    -moz-perspective: 800px;
+}
+.main ul li a > div
+{
+	position: absolute;
+    left: 0px;
+    color: #000;
+	height:0;
+	width: 100%;
+    height: 100%;
+    /*动画元素transform-style*/
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transition: .8s ease-in-out ;
+    -moz-transition:  .8s ease-in-out ;
+    /*动画元素背后设置为hidden*/
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+ .main ul li a div:first-child{
+	transform:rotateY(0);
+	z-index: 2;
+}
+.main ul li a div:last-child{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(236, 241, 244, 1)), color-stop(100%, rgba(190, 202, 217, 1)));
+	-webkit-transform:rotateY(180deg);
+	z-index:1;
+}
+.main ul li a:hover div:first-child{
+	-webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+
+}
+.main ul li a:hover div:last-child{
+	-webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+} 
+.main ul li a div h3
+{
+    margin: 0 auto 15px;
+    padding: 15px 0;
+    width: 220px;
+    height: 18px;
+    line-height: 16px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px #fff dashed;
+}
+
+.main ul li a div p
+{
+    padding: 0 10px;
+    font-size: 12px;
+    text-indent: 2em;
+    line-height: 18px;
+}
