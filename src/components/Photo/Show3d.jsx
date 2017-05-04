@@ -9,11 +9,11 @@ class Show3d extends Component{
 	}
 	render(){
 		return(
-				<div className={styles.main}>
-					<ul>
+				<div>
+					<ul className={styles.main}>
 						<li>
 					        <div className={styles.wrapper}>
-					            <img src="../../../static/images/pic1.jpg" height="130" width="460" />
+					            <img src="../../../static/images/pic1.jpg" height="100" width="460" />
 					            <span>
 					              <strong>标题</strong> 这是一幅画.
 					            </span>

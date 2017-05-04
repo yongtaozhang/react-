@@ -1,53 +1,45 @@
-
 .main li{
 	cursor: pointer;
 	-webkit-perspective: 4000px;
 	width:460px;
-	height:130px;
+	heigth:100px;
 	float: left;
 	margin-left: 60px;
 }
 .main .wrapper{
-    position: relative;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform .6s;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform .6s;
 }
 .main li img{
+	position: absolute;
+	top:0;
 	border-radius: 3px;
 	box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
 	-webkit-transform: translateZ(50px);
-	-webkit-transition: all .6s; 
+	-webkit-transition: all .6s;
+}
+.main li span{
 	position: absolute;
 	top:0px;
-}
-.main li span
-{
-    background-color: #eee;
-    position: absolute;
-    -webkit-transform: rotateX(-89deg) translateZ(50px);
-    -webkit-transition: all .6s;
-    display: block;
-    top: 22px;
-    text-align: left;
-    border-radius: 20px;
-    font-size: 12px;
-    padding:20px;
-    width: 460px;
-    height: 130px;
-    box-shadow: none;
-}
-.main li span strong{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(236, 241, 244, 1)), color-stop(100%, rgba(190, 202, 217, 1)));
+	width:460px;
+	height:100px;
+	border-radius: 15px;
 	display: block;
-	font-size: 20px;
+	text-align: left;
+	box-shadow: none;
+	-webkit-transform: rotateX(-90deg) translateZ(50px);
+	-webkit-transition: all .6s;
 }
 .main li:hover .wrapper{
-	-webkit-transform: rotateX(90deg);
-} 
+	-webkit-transform: rotateX(95deg) translateZ(-50px);
+}
 .main li:hover img{
+	border-radius: 15px;
 	box-shadow: none;
-	border-radius: 20px;
 }
 .main li:hover span{
+	border-radius: 3px;
 	box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
 }
