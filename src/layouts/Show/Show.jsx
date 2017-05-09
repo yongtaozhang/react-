@@ -3,6 +3,7 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import Show3d from '../../components/Photo/Show3d';
 import TurnAround from '../../components/Photo/TurnAround';
+import Muma from '../../components/Photo/Muma';
 import styles from '../lunbo/Lunbo.less';
 
 
@@ -22,6 +23,9 @@ class Show extends Component{
 						  		<div className={styles.tu_img}>
 						  			<TurnAround />
 						  		</div>	
+						  	</div>
+						  	<div className={styles.tu_muma}>
+						  		<Muma />
 						  	</div>
 					  </div>
 				);
